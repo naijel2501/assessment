@@ -1,6 +1,6 @@
 'use strict';
 const userNameInput = document.getElementById('user-name');
-const assesmentButton = document.getElementById('assesment');
+const assessmentButton = document.getElementById('assessment');
 const resultDivided = document.getElementById('result-area');
 const tweetDivided = document.getElementById('tweet-area');
 // assesmentButton.onclick = function(){
@@ -91,7 +91,7 @@ const answers = [
  * @param {string} usename ユーザーの名前
  * @return {string} 診断結果
  */
-function assesment(userName) {
+function assessment(userName) {
     //全文字のコード番号を取得してそれを足し合わせる
     let sumOfCharCode = 0;
     for (let i = 0; i < userName.length; i++) {
@@ -124,6 +124,6 @@ console.log(assesment('次郎'));
 // );.
 
 console.assert(
-    assesment('太郎') === assesment('太郎'), '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
+    assessment('太郎') === assessment('太郎'), '入力が同じ名前なら同じ診断結果を出力する処理が正しくありません。'
 
 );
