@@ -21,7 +21,7 @@ function removeAllChildren(element) {
     }
 };
 
-assesmentButton.onclick = () => {
+assessmentButton.onclick = () => {
     const userName = userNameInput.value;
     if (userName.length === 0) {//名前が空の時は処理を終了する
         return;
@@ -37,7 +37,7 @@ assesmentButton.onclick = () => {
 
 
     const paragraph = document.createElement('p');
-    const result = assesment(userName);
+    const result = assessment(userName);
     paragraph.innerText = result;
     resultDivided.appendChild(paragraph);
    
@@ -62,7 +62,7 @@ assesmentButton.onclick = () => {
 
 userNameInput.onkeydown = (event) => {
     if (event.key === 'Enter'){
-        assesmentButton.onclick();
+        assessmentButton.onclick();
     }
 };
 
@@ -110,7 +110,7 @@ function assessment(userName) {
 
     return result;
 }
-console.log(assesment('次郎'));
+console.log(assessment('次郎'));
 // console.log(assesment('次郎'));
 // console.log(assesment('三郎'));
 
